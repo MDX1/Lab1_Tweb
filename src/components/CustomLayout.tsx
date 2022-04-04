@@ -1,9 +1,10 @@
 import { Layout, Menu, Breadcrumb} from 'antd';
 import { MyCard } from './MyCard';
 import { Row, Col} from 'antd'
+import { Inputs } from './Input';
+import { CustomProp } from '../Interface/CustomProp';
 import './lab3.css';
 
-import { Inputs } from './Input';
 const style = { background: '#0092ff', padding: '0px 0' };
 const { Header, Content, Footer } = Layout;
 
@@ -11,12 +12,17 @@ const { Header, Content, Footer } = Layout;
 
 
 export const CustomLayout = () =>{
-
-
-
+    const infoElev = {
+      id: 1,
+      nume: "Rick",
+      prenume: "Sanchez",
+      varsta: 71,
+      inaltime: 170,
+      email: "@mail.com",
+      adresaHome: "Florilor",
+    }
 
     return(
-        <>
       <Layout className="layout">
     <Header>
       <div className="logo" />
@@ -49,10 +55,19 @@ export const CustomLayout = () =>{
     </Row>
 
       </div>
-    </Content>
-    <Footer style={{ textAlign: 'center' }}>Caraulan Dumitru CR-191</Footer>
-  </Layout>
-    </>
-    )
-}
 
+      <div>
+
+        <CustomProp mainInterface={ infoElev } secondInterface={ infoElev}/>
+
+     </div>
+    </Content>
+    
+    <Footer style={{ textAlign: 'center' }}>Caraulan Dumitru CR-191</Footer>
+  
+     
+    </Layout>
+
+    )
+    
+}
