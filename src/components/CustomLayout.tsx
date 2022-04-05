@@ -2,26 +2,32 @@ import { Layout, Menu, Breadcrumb} from 'antd';
 import { MyCard } from './MyCard';
 import { Row, Col} from 'antd'
 import { Inputs } from './Input';
-import { CustomProp } from '../Interface/CustomProp';
 import './lab3.css';
+import { CustomInterface } from '../Interface/CustomInterface';
 
 const style = { background: '#0092ff', padding: '0px 0' };
 const { Header, Content, Footer } = Layout;
 
-
-
-
 export const CustomLayout = () =>{
-    const infoElev = {
-      id: 1,
-      nume: "Rick",
-      prenume: "Sanchez",
-      varsta: 71,
-      inaltime: 170,
-      email: "@mail.com",
-      adresaHome: "Florilor",
-    }
+    const infoElev = [
+      {
+        nume: "Rick",
+        prenume: "Sanchez",
+        varsta: 71,
+        inaltime: 190,
+        email: "@mail.com",
+        adresaHome: "Smith Residence",
+      },
+      {
+        nume: "Morty",
+        prenume: "Smith",
+        varsta: 14,
+        inaltime: 160,
+        email: "@mail.com",
+        adresaHome: "Smith Residence",
+      }
 
+    ]
     return(
       <Layout className="layout">
     <Header>
@@ -58,7 +64,7 @@ export const CustomLayout = () =>{
 
       <div>
 
-        <CustomProp mainInterface={ infoElev } secondInterface={ infoElev}/>
+        <CustomInterface infoUtilizator={infoElev} />
 
      </div>
     </Content>
