@@ -1,5 +1,10 @@
 @import '~antd/dist/antd.css';
 
+main{
+  min-height: calc(100vh - 105px - 64px);
+  margin: 16px 0px;
+}
+
 /* grid */
 .gutter-box {
   padding: 8px 0;
@@ -8,8 +13,6 @@
 [data-theme="dark"] .gutter-box {
   background: #028ac8;
 }
-
-
 
 /* card */
 .code-box-demo p {
