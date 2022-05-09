@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ILoginStore, IRootStore } from './Interface/MyInterface';
 import storeProvider, { storeLoginProv } from './mst/stores/StoreProvider';
+import { BrowserRouter } from "react-router-dom";
 
 const StoreContext = React.createContext<IRootStore | any>(null);
 const LoginContext = React.createContext<ILoginStore | any>(null);
@@ -31,7 +32,9 @@ ReactDOM.render(
   <React.StrictMode>
   <StoreProvider>
     <LoginProvider>
+      <BrowserRouter>
         <App />
+      </BrowserRouter>
     </LoginProvider>
   </StoreProvider>
 </React.StrictMode>,
