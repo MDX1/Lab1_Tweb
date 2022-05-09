@@ -1,7 +1,8 @@
+import LoginStore from './LoginStore'
 import RootStore from './RootStore.store'
 
 const storeProvider = RootStore.create({
-    contents: [
+    contents: [  
         {
             id: '1',
             title: 'Intrebarea 1:',
@@ -21,3 +22,13 @@ const storeProvider = RootStore.create({
 })
 
 export default storeProvider
+
+export const storeLoginProv = LoginStore.create({
+    contents:[
+        {
+            id: '1',
+            user: 'dimon',
+            password: 'dimon'
+        }
+    ]
+})
