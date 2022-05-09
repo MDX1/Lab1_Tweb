@@ -47,3 +47,8 @@ main{
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* text interface */
+  .interface-text {
+    text-align: center;
+  }

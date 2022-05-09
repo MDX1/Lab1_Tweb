@@ -1,7 +1,9 @@
+import { Row, Col} from 'antd'
+
 import { Card } from 'antd';
 const { Meta } = Card;
 
-export const MyCard = () =>{
+const MyCard = () =>{
     return(
 
   <Card
@@ -12,4 +14,19 @@ export const MyCard = () =>{
     <Meta title="Europe Street beat" description="www.instagram.com" />
   </Card>
     )
+}
+
+export const CustomCard = () => {
+  return(
+    <>
+      <main>
+        <Row justify="space-around">
+          <Col span={4}><MyCard/></Col>
+          <Col span={4}><MyCard/></Col>
+          <Col span={4}><MyCard/></Col>
+          <Col span={4}><MyCard/></Col>
+        </Row>
+      </main>
+    </>
+  )
 }

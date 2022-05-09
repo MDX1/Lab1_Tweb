@@ -1,4 +1,4 @@
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
 import { notification } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
 
@@ -72,3 +72,16 @@ export const Inputs = () =>{
 }
 
 
+export const CustomInput = () => {
+  return(
+    <>
+      <main>
+        <div className="site-layout-content">
+          <Row justify="space-around">
+            <Col span={16}><Inputs/></Col>
+          </Row>
+        </div>
+      </main>
+    </>
+  )
+}
